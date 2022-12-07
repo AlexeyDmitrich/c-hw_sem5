@@ -1,5 +1,6 @@
 ﻿namespace MyMethods;
 public class MyMethod {
+    Random rnd = new Random();
 
     public int IntInput (string commonText){
         Console.WriteLine ($"Ожидается целое число : {commonText}");
@@ -77,4 +78,22 @@ public class MyMethod {
             return (num * -1);
         }
     }
+
+    // метод для генерации массива 
+    int[] ArrayGen()
+    {
+        int length = IntInput("длина массива");
+        int min = IntInput("минимальное значение");
+        int max = IntInput("максимальное значение");
+        int[] array = new int[length];
+        for (int i = 0; i < length; i++)
+        {
+            array[i] = rnd.Next(min, max);  
+        }
+        // отладка:
+        // my.PrintArr(array);
+
+        return array;
+    }
+
 }
