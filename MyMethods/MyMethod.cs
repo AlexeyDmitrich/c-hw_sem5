@@ -1,22 +1,23 @@
-class MyMethod {
+﻿namespace MyMethods;
+public class MyMethod {
 
-    public int IntInput (){
-        Console.WriteLine ("Ожидается целое число");
+    public int IntInput (string commonText){
+        Console.WriteLine ($"Ожидается целое число : {commonText}");
         bool isInt = int.TryParse((Console.ReadLine()), out int num);
         if (! isInt){
             Console.WriteLine ("Недопустимый тип данных");
-            return IntInput();
+            return IntInput(commonText);
         } else {
             return num;
         }
     }
 
-    public double DoubleInput (){
-        Console.WriteLine ("Ожидается вещественное число");
+    public double DoubleInput (string commonText){
+        Console.WriteLine ($"Ожидается вещественное число : {commonText}");
         bool isDouble = double.TryParse((Console.ReadLine()), out double num);
         if (! isDouble){
             Console.WriteLine ("Недопустимый тип данных");
-            return DoubleInput();
+            return DoubleInput(commonText);
         } else {
             return num;
         }

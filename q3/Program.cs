@@ -4,6 +4,8 @@
 отрезке [10,99].
 Пример для массива из 5, а не 123 элементов. В своём решении сделайте для
 */
+
+using MyMethods;
 Random rnd = new Random();
 MyMethod my = new MyMethod();
 
