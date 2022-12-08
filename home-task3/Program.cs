@@ -11,14 +11,22 @@ double[] array = my.ArrayGenD();
 double result = Spread(FindMin(array), FindMax(array));
 
 double FindMax (double[] usersArray){
-    double max = 0;
-// todo: make realisation 
+    double max = 0;  // нужно подставить что-то около минус бесконечности
+    for (int i =0; i<usersArray; i++){
+        if usersArray[i]>max{
+            max=usersArray[i];
+        }
+    }
     return max;
 }
 
 double FindMin (double[] usersArray){
-    double min = 0;
-// todo: make realisation
+    double min = 0; // мне срочно нужна бесконечность
+    for (int i =0; i<usersArray; i++){
+        if usersArray[i]<min{
+            min=usersArray[i];
+        }
+    }
     return min;
 }
 
