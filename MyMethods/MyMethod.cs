@@ -80,7 +80,7 @@ public class MyMethod {
     }
 
     // метод для генерации массива 
-    int[] ArrayGen()
+    public int[] ArrayGen()
     {
         int length = IntInput("длина массива");
         int min = IntInput("минимальное значение");
@@ -93,6 +93,21 @@ public class MyMethod {
         // отладка:
         // my.PrintArr(array);
 
+        return array;
+    }
+
+    public double[] ArrayGenD()
+    {
+        int length = IntInput("длина массива");
+        int min = IntInput("минимальное значение");
+        int max = IntInput("максимальное значение");
+        double[] array = new double[length];
+        for (int i = 0; i < length; i++)
+        {
+            array[i] = rnd.Next(min, max);  
+        }
+        // отладка:
+        // my.PrintArr(array);
         return array;
     }
 
