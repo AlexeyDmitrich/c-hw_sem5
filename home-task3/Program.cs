@@ -11,7 +11,7 @@ double[] array = my.ArrayGenD();
 double result = Spread(FindMin(array), FindMax(array));
 
 double FindMax (double[] usersArray){
-    double max = 0;  // нужно подставить что-то около минус бесконечности
+    double max = double.NegativeInfinity;  // нужно подставить что-то около минус бесконечности
     for (int i =0; i<usersArray; i++){
         if usersArray[i]>max{
             max=usersArray[i];
@@ -21,7 +21,7 @@ double FindMax (double[] usersArray){
 }
 
 double FindMin (double[] usersArray){
-    double min = 0; // мне срочно нужна бесконечность
+    double min = double.NegativeInfinity; // мне срочно нужна бесконечность
     for (int i =0; i<usersArray; i++){
         if usersArray[i]<min{
             min=usersArray[i];
