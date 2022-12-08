@@ -10,7 +10,7 @@ Random rnd = new Random();
 
 int[] usersArray = ArrayGen();
 int quantOfEvens = QuantityOfEvenNums(usersArray);
-my.PrintArr(usersArray);
+my.Print(usersArray);
 my.Print($"В полученном массиве {quantOfEvens} четных чисел");
 
 // метод для генерации массива 
@@ -23,7 +23,7 @@ int[] ArrayGen()
         array[i] = rnd.Next(100, 1000);  // [100; 1000)
     }
     // отладка:
-    // my.PrintArr(array);
+    // my.Print(array);
 
     return array;
 }

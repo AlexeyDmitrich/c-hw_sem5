@@ -12,7 +12,7 @@ int[] array = my.ArrayGen();
 
 int result = SumUnevenElements(array);
 my.Print("Сумма элементов, стоящих на нечётных позициях массива");
-my.PrintArr(array);
+my.Print(array);
 my.Print($"равна {result}");
 
 //TestSumUnevenElements();

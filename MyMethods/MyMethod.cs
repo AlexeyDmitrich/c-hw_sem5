@@ -29,19 +29,19 @@ public class MyMethod {
     }
 
 
-    public void PrintArr (int[] array){
+    public void Print (int[] array){
         for(int i = 0; i < array.Length; i++){
             Console.Write($"{array[i]} ");
         }
         Console.WriteLine();
         }
-    public void PrintArr (double[] array){
+    public void Print (double[] array){
         for(int i = 0; i < array.Length; i++){
             Console.Write($"{array[i]} ");
         }
         Console.WriteLine();
         }
-    public void PrintArr (int[,] array){
+    public void Print (int[,] array){
         int rows = array.GetUpperBound(0)+1;
         int columns = array.Length / rows;
         for(int i = 0; i < rows; i++){
@@ -52,7 +52,7 @@ public class MyMethod {
         }
         Console.WriteLine();
     }
-    public void PrintArr (double[,] array){
+    public void Print (double[,] array){
         int rows = array.GetUpperBound(0)+1;
         int columns = array.Length / rows;
         for(int i = 0; i < rows; i++){
@@ -107,7 +107,7 @@ public class MyMethod {
             array[i] = rnd.Next(min, max);  
         }
         // отладка:
-        // my.PrintArr(array);
+        // my.Print(array);
         return array;
     }
 

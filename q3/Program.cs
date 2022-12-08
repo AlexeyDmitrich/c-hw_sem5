@@ -9,14 +9,14 @@ using MyMethods;
 Random rnd = new Random();
 MyMethod my = new MyMethod();
 
-int len = my.IntInput();
-int min = my.IntInput();
-int max = my.IntInput();
+int len = my.IntInput("длина массива");
+int min = my.IntInput("минимальное значение");
+int max = my.IntInput("максимальное значение");
 
 double[] useArray = ArrayGen(len,min,max);
-my.PrintArr(useArray);
+my.Print(useArray);
 double[] resArray = FindInRange(useArray);
-my.PrintArr(resArray);
+my.Print(resArray);
 
 double[] arr = ArrayGen(len, min, max);
 double [] ArrayGen (int arrayLength, int min, int max){

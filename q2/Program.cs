@@ -9,12 +9,12 @@ using System;
 /*cHwSem5.*/MyMethod my = new MyMethod();
 Random rnd = new Random();
 
-int len = my.IntInput();
-int min = my.IntInput();
-int max = my.IntInput();
+int len = my.IntInput("длина массива");
+int min = my.IntInput("минимальное значение");
+int max = my.IntInput("максимальное значение");
 double[] arr = ArrayGen(len, min, max);
-my.PrintArr(arr);
-double findNum = my.DoubleInput();
+my.Print(arr);
+double findNum = my.DoubleInput("искомое значение");
 bool isNumberInArray = FindNumInArray(arr, findNum);
 my.Print($"{isNumberInArray}");
 

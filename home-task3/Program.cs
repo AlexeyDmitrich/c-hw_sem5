@@ -8,12 +8,18 @@ using MyMethods;
 MyMethod my = new MyMethod();
 
 double[] array = my.ArrayGenD();
-double result = Spread(FindMin(array), FindMax(array));
+double min = FindMin(array);
+double max = FindMax(array);
+double result = Spread(min, max);
+
+my.Print($"Разница между максимальным ({max}) и минимальным ({min}) элементами массива");
+my.Print(array);
+my.Print($"равна {result}");
 
 double FindMax (double[] usersArray){
-    double max = double.NegativeInfinity;  // нужно подставить что-то около минус бесконечности
-    for (int i =0; i<usersArray; i++){
-        if usersArray[i]>max{
+    double max = double.NegativeInfinity; 
+    for (int i =0; i<usersArray.Length; i++){
+        if (usersArray[i]>max){
             max=usersArray[i];
         }
     }
@@ -21,9 +27,10 @@ double FindMax (double[] usersArray){
 }
 
 double FindMin (double[] usersArray){
-    double min = double.NegativeInfinity; // мне срочно нужна бесконечность
-    for (int i =0; i<usersArray; i++){
-        if usersArray[i]<min{
+    double min = usersArray[0]; // double.PositiveInfinity; // с бесконечностью получилось интересней, 
+                                                            // но так на один элемент короче
+    for (int i =1; i<usersArray.Length; i++){
+        if (usersArray[i]<min){
             min=usersArray[i];
         }
     }

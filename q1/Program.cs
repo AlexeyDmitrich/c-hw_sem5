@@ -6,13 +6,13 @@ using MyMethods;
 MyMethod my = new MyMethod();
 Random rnd = new Random();
 
-int len = my.IntInput();
-int min = my.IntInput();
-int max = my.IntInput();
+int len = my.IntInput("Длина массива");
+int min = my.IntInput("минимальное значение");
+int max = my.IntInput("максимальное значение");
 double[] arr = ArrayGen(len, min, max);
-my.PrintArr(arr);
+my.Print(arr);
 arr = ArrReverse(arr);
-my.PrintArr(arr);
+my.Print(arr);
 
 double [] ArrayGen (int arrayLength, int min, int max){
     double [] arr = new double [arrayLength];
